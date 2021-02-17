@@ -30,6 +30,7 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "start:dev": "ember server --proxy https://conduit.productionready.io",
+    "start:fastboot": "EXPERIMENTAL_RENDER_MODE_SERIALIZE=true ember server --environment=production --proxy https://conduit.productionready.io",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test"
   },
