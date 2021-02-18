@@ -19,8 +19,8 @@
             {{/if}}
             <li class="nav-item">
               {{#let (and (not this.tag) (not this.feed)) as |isGlobalFeed|}}
-                <LinkTo @route="index" @query={{hash feed=null tag=null page=1}}
-                  class="nav-link {{if isGlobalFeed "active"}}" data-test-tab="global">
+                <LinkTo @route="index" @query={{hash feed=null tag=null page=1}} class="nav-link {{if isGlobalFeed "
+                  active"}}" data-test-tab="global">
                   Global Feed
                 </LinkTo>
               {{/let}}
@@ -33,7 +33,7 @@
             {{/if}}
           </ul>
         </div>
-        <ArticleList @feed={{this.feed}} @page={{this.page}} @tag={{this.tag}} />
+        <ArticleList @articles={{@model}} @feed={{this.feed}} @page={{this.page}} @tag={{this.tag}} />
       </div>
       <div class="col-md-3">
         <div class="sidebar">
